@@ -21,10 +21,6 @@
     height: 75px;
     object-fit: cover;
     border-radius: 4px;
-
-    @media (max-width: 650px) {
-        display: none;
-    }
 }
 
 .favNoCover {
@@ -36,6 +32,10 @@
     justify-content: center;
     text-transform: uppercase;
     text-align: center;
+
+    @media (max-width: 650px) {
+        /* display: none; */
+    }
 }
 
 .favInfo {
@@ -79,5 +79,11 @@
 
     &:hover {
         transform: scale(1.1);
+    }
+}
+
+@media (max-width: 650px) {
+    .favCover, .favNoCover {
+        display: none;
     }
 }
