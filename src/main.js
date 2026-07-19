@@ -43,8 +43,9 @@ const renderFavorites = () => {
     emptyMsg.style.fontFamily = 'var(--font-source)';
     emptyMsg.style.color = 'var(--text)';
     emptyMsg.style.marginTop = '20px';
-    emptyMsg.textContent = 'No favorites yet';
+    emptyMsg.textContent = 'No favorites yet.';
     favoritesContainer.appendChild(emptyMsg);
+
     return;
   }
 
