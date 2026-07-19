@@ -1,0 +1,16 @@
+.authorSelect {
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font: 600 14px var(--font-source);
+    color: var(--title);
+    background-color: var(--white);
+    outline: none;
+    cursor: pointer;
+    min-width: 200px;
+    transition: .3s;
+
+    &:focus {
+        border-color: var(--green);
+    }
+}

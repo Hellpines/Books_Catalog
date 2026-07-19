@@ -1,0 +1,83 @@
+.favoriteBookCard {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+    transition: .2s;
+
+    &:hover {
+        transform: scale(1.01);
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.favCover, .favNoCover {
+    width: 50px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 4px;
+
+    @media (max-width: 650px) {
+        display: none;
+    }
+}
+
+.favNoCover {
+    background-color: var(--secondary);
+    color: var(--black);
+    font: 600 10px var(--font-source);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.favInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.favTitle {
+    font: 600 16px var(--font-playfair);
+    color: var(--title);
+    margin: 0;
+
+    @media (max-width: 520px) {
+        font: 600 13px var(--font-playfair);
+    }
+}
+
+.favAuthor, .favYear {
+    font: 400 13px var(--font-source);
+    color: var(--text);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (max-width: 520px) {
+        font: 400 11px var(--font-source);
+    }
+}
+
+.favoriteBookCard .favButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: .2s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+:root {
+    --white: #ffffff;
+    --green: #27694d;
+    --light-green: #c5d3c5;
+    --yellow: #daa520;
+    --red: #ef4444;
+    --brown: #383129;
+    --black: #2a2622;
+
+    --title: #2b2622;
+    --text: #7c736a;
+    --border: #E7E2DA;
+
+    --background: #f7f4ef;
+    --card: #fcfaf7;
+    --secondary: #eeebe4;
+    --shadow: #c4b8a8;
+    --favorite: #eaf0ed;
+
+    --font-playfair: 'Playfair Display';
+    --font-source: 'Source Sans 3';
+}
+
+[data-theme="dark"] {
+    --white: #1e1e1e;
+    --green: #4ade80;
+    --yellow: #facc15;
+    --red: #f87171;
+    --brown: #a8a29e;
+    --black: #f3f4f6;
+
+    --title: #f3f4f6;
+    --text: #9ca3af;
+    --border: #374151;
+
+    --background: #121212;
+    --card: #1f2937;
+    --secondary: #374151;
+    --shadow: #000000;
+    --favorite: #111827;
+}
+
+body, .bookCard, .favoritesSection, #search-input, .mainTextBlock {
+    transition: .3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mainContent {
+    flex: 1;
+    padding: 0 20px;
+}
+
+#searchContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.contentWrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 50px auto;
+    flex: 1;
+    max-width: 1500px;
+    width: 100%;
+    padding: 0 20px;
+
+    @media (max-width: 520px) {
+        padding: 0;
+    }
+}
+
+#resultsContainer {
+    flex: 1;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.favoritesSection {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    padding: 12px;
+    width: 320px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    @media (max-width: 650px) {
+        width: 200px;
+    }
+
+    @media (max-width: 520px) {
+        width: 160px;
+    }
+}
+
+.loadingState {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    font: 500 24px var(--font-source);
+    color: var(--text);
+    text-align: center;
+}

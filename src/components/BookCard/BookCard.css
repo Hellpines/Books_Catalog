@@ -1,0 +1,105 @@
+.bookCard {
+    background-color: var(--card);
+    background-position: center;
+    border: 1px solid var(--border);
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 240px;
+    box-shadow: 0px 5px 10px -4px var(--shadow);
+    transition: .2s;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    @media (max-width: 520px) {
+        width: 180px;
+    }
+
+    .bookCover {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+
+        @media (max-width: 520px) {
+            height: 265px;
+        }
+    }
+
+    .noCover {
+        width: 100%;
+        height: 400px;
+        background-color: var(--secondary);
+        font: 600 20px var(--font-source);
+        color: var(--black);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+
+        @media (max-width: 520px) {
+            height: 265px;
+        }
+    }
+
+    .favButton {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        background-color: var(--white);
+        opacity: 75%;
+        border: none;
+        padding: 8px;
+        transition: .1s;
+
+        img {
+            color: var(--white);
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &.active .heartIcon {
+            fill: var(--red);
+            stroke: var(--red);
+        }
+    }
+
+    .heartIcon {
+        fill: transparent;
+        stroke: var(--text);
+        transition: .3s;
+    }
+
+    .bookInfo {
+        padding: 10px;
+
+        .bookTitle {
+            font: 700 16px var(--font-source);
+            color: var(--title);
+            margin-bottom: 5px;
+        }
+
+        .bookAuthor {
+            font: 600 14px var(--font-source);
+            color: var(--text);
+            margin-bottom: 5px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .bookYear {
+            font: 400 14px var(--font-source);
+            color: var(--text);
+        }
+    }
+}

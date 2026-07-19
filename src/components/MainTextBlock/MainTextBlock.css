@@ -1,0 +1,24 @@
+.mainTextContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    h1, p {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font: 600 36px var(--font-playfair);
+        margin-bottom: 12px;
+        color: var(--title);
+    }
+
+    p {
+        font: 500 16px var(--font-source);
+        color: var(--text);
+        max-width: 530px;
+        margin: auto;
+    }
+}
